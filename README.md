@@ -1,5 +1,5 @@
-# Reproducible Research
+# Hacking Lab Challenge HS17
 
-Are available at this repository codes that allow users to reproduce researches.   
+This code is based on work by Ramon Fontes from the University of Campinas, Brazil.
 
-Codes available at the moment include those related to Mininet-WiFi.
+The project shows how the KRACK attack can be performed on a Mininet network in a Virtual machine. For the project, we used the current Kali VM 10.16 from Compass Security.
