@@ -203,7 +203,7 @@ class KRAckAttackFt():
 	def handle_rx(self):
 		p = self.sock.recv()
 		if p == None: return
-
+		
 		# Detect whether hardware encryption is decrypting the frame, *and* removing the TKIP/CCMP
 		# header of the (now decrypted) frame.
 		# FIXME: Put this check in MitmSocket? We want to check this in client tests as well!
@@ -220,6 +220,7 @@ class KRAckAttackFt():
 
 
 		if p.addr2 == self.clientmac and Dot11ReassoReq in p:
+			#check if it is a reassosiaction frame
 			if get_tlv_value(p, IEEE_TLV_TYPE_RSN) and get_tlv_value(p, IEEE_TLV_TYPE_FT):
 				log(INFO, "Detected FT reassociation frame")
 				self.reassoc = p
