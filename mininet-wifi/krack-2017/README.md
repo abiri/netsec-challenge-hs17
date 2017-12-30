@@ -2,13 +2,10 @@
 
 ## Installation guide for KALI:
 
-1. Download "Mininet-Wifi" as described in README
-2. Open installation script: `vim util/install.sh`
-3. Replace 'Debian' with 'Kali': `:%s/Debian/Kali/g`
-4. Save and exit: `:write` , `:quit`
-5. Continue installation (including option `-l` to get 'wmediumd'): `sudo util/install.sh -Wnfvl`
-6. Start Openvswitch service: `sudo service openvswitch-switch start`
-6. Test correct installation: `sudo mn --test pingall`
+1. Download our version of "Mininet-Wifi" on Github: https://github.com/abiri/mininet-wifi
+2. Continue installation (including option `-l` to get 'wmediumd'): `sudo util/install.sh -Wnfvl`
+3. Start Openvswitch service: `sudo service openvswitch-switch start`
+4. Test correct installation: `sudo mn --test pingall`
 
 ## Init network & testing vulnerability
 
