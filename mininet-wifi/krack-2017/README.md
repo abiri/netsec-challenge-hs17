@@ -20,3 +20,9 @@ Short video available at: https://www.youtube.com/watch?v=aA4notyZph0
 7. Print infos on first sta1 console: `status` , `scan_results`
 8. Associate with another AP: `roam 02:00:00:00:00:01`
 9. Observe results of connected sta1 which can now ping and shows vulnerability in main console
+
+### Observe traffic
+
+Before reading traffic with wireshar, start the default interface **hwsim0** as described in the manual (p. 31):
+
+`mininet-wifi> sh ifconfig hwsim0 up`
