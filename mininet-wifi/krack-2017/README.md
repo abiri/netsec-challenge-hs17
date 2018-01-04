@@ -9,23 +9,23 @@
 
 ## Switch WPA Supplicant Version
 (started with clean VM)
-1. 'sudo gpt-get install get'
-2. 'git clone https://github.com/intrig-unicamp/mininet-wifi'
-3. 'cd mininet-wifi'
+1. `sudo gpt-get install get`
+2. `git clone https://github.com/intrig-unicamp/mininet-wifi`
+3. `cd mininet-wifi`
 4. Replace Debian with Kali
-5. 'vim util/install.sh'
+5. `vim util/install.sh`
 6. search for wpa_supplicant
-  '/wpa_supplicant'
+  `/wpa_supplicant`
   and comment out 2 times the 3 lines from 
-  'pushd' to 'sudo make && make install'
+  `pushd' to 'sudo make && make install`
  save with
- ':wq'
-7. download old wpa_supplicant from 'www.w1.fi/releases'
-8. run install script: 'sudo util/install.sh -WnfvL'
-9. Replace all files in 'mininet-wifi/hostap' with the folders fromthe old wpa_supplicant
-10. go to hostap folder: 'cd hostap/wpa_supplicant'
-11. 'cp defconfig .config'
-12. 'sudo make && make install'
+ `:wq`
+7. download old wpa_supplicant from `ww.w1.fi/releases`
+8. run install script: `sudo util/install.sh -WnfvL`
+9. Replace all files in `mininet-wifi/hostap` with the folders fromthe old wpa_supplicant
+10. go to hostap folder: `cd hostap/wpa_supplicant`
+11. `cp defconfig .config`
+12. `sudo make && make install`
 
 ## Init network & testing vulnerability
 
