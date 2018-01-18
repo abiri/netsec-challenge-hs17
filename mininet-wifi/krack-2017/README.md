@@ -7,26 +7,6 @@
 3. Start Openvswitch service: `sudo service openvswitch-switch start`
 4. Test correct installation: `sudo mn --test pingall`
 
-## Switch WPA Supplicant Version
-(started with clean VM)
-1. `sudo gpt-get install get`
-2. `git clone https://github.com/intrig-unicamp/mininet-wifi`
-3. `cd mininet-wifi`
-4. Replace Debian with Kali
-5. `vim util/install.sh`
-6. search for wpa_supplicant
-  `/wpa_supplicant`
-  and comment out 2 times the 3 lines from 
-  `pushd' to 'sudo make && make install`
- save with
- `:wq`
-7. download old wpa_supplicant from `ww.w1.fi/releases`
-8. run install script: `sudo util/install.sh -WnfvL`
-9. Replace all files in `mininet-wifi/hostap` with the folders fromthe old wpa_supplicant
-10. go to hostap folder: `cd hostap/wpa_supplicant`
-11. `cp defconfig .config`
-12. `sudo make && make install`
-
 ## Init network & testing vulnerability
 
 Short video available at: https://www.youtube.com/watch?v=aA4notyZph0
@@ -46,3 +26,23 @@ Short video available at: https://www.youtube.com/watch?v=aA4notyZph0
 Before reading traffic with Wireshark, start the default interface **hwsim0** as described in the manual (p. 31):
 
 `mininet-wifi> sh ifconfig hwsim0 up`
+
+## Manually switch WPA Supplicant Version
+(started with clean VM)
+1. `sudo gpt-get install get`
+2. `git clone https://github.com/intrig-unicamp/mininet-wifi`
+3. `cd mininet-wifi`
+4. Replace Debian with Kali
+5. `vim util/install.sh`
+6. search for wpa_supplicant
+  `/wpa_supplicant`
+  and comment out 2 times the 3 lines from 
+  `pushd' to 'sudo make && make install`
+ save with
+ `:wq`
+7. download old wpa_supplicant from `ww.w1.fi/releases`
+8. run install script: `sudo util/install.sh -WnfvL`
+9. Replace all files in `mininet-wifi/hostap` with the folders fromthe old wpa_supplicant
+10. go to hostap folder: `cd hostap/wpa_supplicant`
+11. `cp defconfig .config`
+12. `sudo make && make install`
