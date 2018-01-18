@@ -43,6 +43,6 @@ Short video available at: https://www.youtube.com/watch?v=aA4notyZph0
 
 ### Observe traffic
 
-Before reading traffic with wireshar, start the default interface **hwsim0** as described in the manual (p. 31):
+Before reading traffic with Wireshark, start the default interface **hwsim0** as described in the manual (p. 31):
 
 `mininet-wifi> sh ifconfig hwsim0 up`
